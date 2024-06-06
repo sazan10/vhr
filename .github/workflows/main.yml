@@ -25,5 +25,5 @@ jobs:
     - name: Compile Java sources
       run: |
         cd vhr
-        mvn clean install -DskipTests
+        mvn clean -DskipTests install
         
