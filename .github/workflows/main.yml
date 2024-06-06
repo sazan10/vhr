@@ -25,5 +25,5 @@ jobs:
     - name: Compile Java sources
       run: |
         cd vhr
-        mvn clean -DskipTests install
+        mvn clean install -Dmaven.test.skip=true
         
