@@ -34,7 +34,7 @@ jobs:
         mvn clean install -Dmaven.test.skip=true
     - name: Run CASR
       run: |
-        find . -name '*.jar' -exec sh -c 'echo "Processing {}" && timeout 1000s casr-java -o {}.casrep -- java -jar {}' \;
+        find . -name '*.java' -exec sh -c 'echo "Processing {}" && timeout 60s casr-java -o {}.casrep -- java  {}' \;
     - name: List any casr reports created
       run: |
         find . -type f -name "*.casrep"
